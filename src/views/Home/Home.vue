@@ -5,7 +5,7 @@
         <div class="row">
           <div class="col-md-12">
             <div>
-              <label>Busca a tu pokemon favorito</label>
+              <label>Busca a tu pokemon favorito:</label>
               <input
                 type="text"
                 class="form-control"
@@ -21,14 +21,14 @@
       <div class="row">
         <div
           class="col-md-3 mb-3"
-          v-for="item in filteredPokemon"
-          :key="item.id">
+          v-for="(item, index) in filteredPokemon"
+          :key="index">
           <pokedex-card :pokemon="item"></pokedex-card>
         </div>
       </div>
       <div class="row">
         <div class="col-md-12 text-center mt-3">
-          <button class="btn btn-primary" @click.prevent="showMorePokemon">Ver más</button>
+          <button v-if="filter === ''" class="btn btn-primary" @click.prevent="showMorePokemon">Ver más</button>
         </div>
       </div>
     </section>
@@ -38,6 +38,7 @@
 import DefaultLayout from '@/layouts/DefaultLayout'
 import PokedexCard from '@/components/PokedexCard'
 import {getPokemon} from '@/services/pokemon'
+import _ from 'lodash'
 export default {
   name: 'HomeView',
   data () {
@@ -55,7 +56,7 @@ export default {
   computed: {
     filteredPokemon () {
       let filteredPokemon = (this.filter === '') ? this.pokemon : this.pokemon.filter(item => {
-        return item.name === this.filter
+        return _.includes(item.name.toLowerCase(), this.filter.toLowerCase())
       })
       return filteredPokemon.slice(0, this.limit)
     }
