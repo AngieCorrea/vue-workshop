@@ -1,8 +1,18 @@
-# vue-workshop
+# Taller de Vue
 
-> A Vue.js project
+Podrás conocer ventajas de utilizar este grandioso framework, como trabajar de forma progresiva con tu aplicación, diferentes arquitecturas, tanto como para diseñadores web, desarrolladores frontend y desarrolladores en React que están interesados en aprender Vue.
 
-## Build Setup
+https://vue-es.org/workshops/2017/11/28/construyendo-una-aplicacion-con-vue-js/
+
+Estos son algunos requisitos que deberás tener disponibles en tu equipo para llevar a cabo el taller sin problemas:
+
+- Instalar `node` y `npm`. En caso de ya haberlo instalado anteriormente verificar utilizando `node -v` y `npm -v`.
+- Instalar `vue-cli` de forma global.
+- Generar un proyecto utilizando `vue-cli`: `vue init webpack workshop-vue`.
+- Instalar la dependencias de proyecto recién generado: `npm i`.
+- Ejecutar el proyecto `npm run dev` de esta forma sabrás si estás listo para comenzar el taller.
+
+## Como iniciar el proyecto
 
 ``` bash
 # install dependencies
@@ -24,4 +34,4 @@ npm run unit
 npm test
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+Para una explicación más detallada sobre como funciona, puedes hacerlo a través de la [guía](http://vuejs-templates.github.io/webpack/) y en la [documentación para vue-loader](http://vuejs.github.io/vue-loader).
