@@ -20,10 +20,12 @@
     <section slot="content" class="podexex-items">
       <div class="row">
         <div
-          class="col-md-3 mb-3"
+          class="col-md-4 col-lg-3 mb-3"
           v-for="(item, index) in filteredPokemon"
-          :key="index">
-          <pokedex-card :pokemon="item"></pokedex-card>
+          :key="index"
+          @click.prevent="goToDetails(item)">
+          <pokedex-card
+            :pokemon="item"></pokedex-card>
         </div>
       </div>
       <div class="row">
@@ -64,6 +66,15 @@ export default {
   methods: {
     showMorePokemon () {
       this.limit += 12
+    },
+    goToDetails (pokemon) {
+      this.$router.push({
+        name: 'DetailPokemon',
+        params: {
+          pokemonName: pokemon.slug,
+          pokemon: pokemon
+        }
+      })
     }
   },
   components: {
