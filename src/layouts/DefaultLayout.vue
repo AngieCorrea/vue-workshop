@@ -13,14 +13,19 @@
       </div>
     </main>
     <!-- end main -->
+    <!-- footer -->
+    <footer-partial></footer-partial>
+    <!-- end footer -->
   </div>
 </template>
 <script>
 import HeaderPartial from '@/partials/HeaderPartial'
+import FooterPartial from '@/partials/FooterPartial'
 export default {
   name: 'DefaultLayout',
   components: {
-    HeaderPartial
+    HeaderPartial,
+    FooterPartial
   }
 }
 </script>

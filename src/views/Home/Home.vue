@@ -3,8 +3,8 @@
     <section slot="filters" class="pokedex-filters mb-5">
       <div class="container">
         <div class="row">
-          <div class="col-md-12">
-            <div>
+          <div class="col-md-12 col-lg-6 ml-auto mr-auto">
+            <div class="text-center">
               <label>Busca a tu pokemon favorito:</label>
               <input
                 type="text"
@@ -28,7 +28,7 @@
       </div>
       <div class="row">
         <div class="col-md-12 text-center mt-3">
-          <button v-if="filter === ''" class="btn btn-primary" @click.prevent="showMorePokemon">Ver más</button>
+          <button v-if="filter === ''" class="btn btn-primary" @click.prevent="showMorePokemon">Cargar más pokemon</button>
         </div>
       </div>
     </section>

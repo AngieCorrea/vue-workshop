@@ -1,7 +1,12 @@
 <template>
   <header class="header">
     <div class="container">
-      Pokédex
+      <nav class="text-center navbar-dark">
+        <a class="navbar-brand" href="#">
+          <img src="../assets/logo_pokemon.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+          Pokédex Virtual
+        </a>
+      </nav>
     </div>
   </header>
 </template>
