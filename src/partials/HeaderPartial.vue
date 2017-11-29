@@ -2,10 +2,10 @@
   <header class="header">
     <div class="container">
       <nav class="text-center navbar-dark">
-        <a class="navbar-brand" href="#">
+        <router-link class="navbar-brand" :to="{ name: 'Home' }">
           <img src="../assets/logo_pokemon.svg" width="30" height="30" class="d-inline-block align-top" alt="">
           Pokédex Virtual
-        </a>
+        </router-link>
       </nav>
     </div>
   </header>
